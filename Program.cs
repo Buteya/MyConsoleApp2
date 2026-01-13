@@ -100,3 +100,237 @@ if(discountPercentage == 10)
 {
     Console.WriteLine($"Renew now and save {discountPercentage}%");
 }
+Console.WriteLine("===================================================");
+Console.WriteLine("new code");
+Console.WriteLine("===================================================");
+
+/*string[] fraudulentOrderIds = new string[3];
+
+fraudulentOrderIds[0] = "A123";
+fraudulentOrderIds[1] = "B456";
+fraudulentOrderIds[2] = "C789";
+//fraudulentOrderIds[3] = "D000";*/
+
+string[] fraudulentOrderIds = ["A123", "B456", "C789"];
+
+Console.WriteLine($"First: {fraudulentOrderIds[0]}");
+Console.WriteLine($"Second: {fraudulentOrderIds[1]}");
+Console.WriteLine($"Third: {fraudulentOrderIds[2]}");
+
+fraudulentOrderIds[0] = "F000";
+
+Console.WriteLine($"Reassign firsr: {fraudulentOrderIds[0]}");
+Console.WriteLine($"There are {fraudulentOrderIds.Length} fraudulent orders to process");
+
+string[] names = { "Rowena", "Robin", "Bao" };
+
+foreach(string name in names)
+{
+    Console.WriteLine(name);
+}
+
+int[] inventory = { 200, 450, 700,175, 250 };
+int sum = 0;
+int bin = 0;
+
+foreach(int items in inventory)
+{
+    sum += items;
+    bin++;
+    Console.WriteLine($"Bin {bin} = {items} items (Running total: {sum})");
+}
+
+Console.WriteLine($"We have {sum} items in the inventory.");
+
+string Name = "Bob";
+if (Name.StartsWith('B'))
+{
+    Console.WriteLine($"The name {Name} starts with [B]!");
+}
+
+string[] orderIds = ["B123", "C234", "A345", "C15", "B177", "G3003", "C235", "B179"];
+
+foreach(string id in orderIds)
+{
+    if (id.StartsWith('B'))
+    {
+        Console.WriteLine(id);
+    }
+}
+
+Console.WriteLine("==================================================================");
+Console.WriteLine("new code");
+Console.WriteLine("==================================================================");
+
+/*string firstName = "Bob";
+int widgetsPurchased = 7;
+Console.WriteLine($"{firstName} purchased {widgetsPurchased} widgets.");*/
+
+/*
+ * The following code creates five random order ids
+ * to test the fraud detection process. Order ids consist of 
+ * a letter from A to E, and a three digit number. Ex. A123.
+ */
+Random newRandom = new Random();
+string[] orderIDs = new string[5];
+
+for (int i = 0; i < orderIDs.Length; i++)
+{
+    int prefixValue = newRandom.Next(65, 70);
+    string prefix = Convert.ToChar(prefixValue).ToString();
+    string suffix = newRandom.Next(1, 1000).ToString("000");
+    orderIDs[i] = prefix + suffix;
+}
+
+foreach(string orderID in orderIDs)
+{
+    Console.WriteLine(orderID);
+}
+
+//example 1
+Console
+.
+WriteLine
+(
+"Hello example 1!"
+)
+;
+
+//example 2
+string firstWord = "Hello";string secondWord = "example 2!";Console.WriteLine(firstWord + " " + secondWord);
+/*
+ * this code takes a message and coverts it into a character array.
+ * then reverses it, counts the number a character appears and converts it back to a string.
+ */
+string originalMessage = "The quick brown fox jumps over the lazy dog";
+char[] characterMessage = originalMessage.ToCharArray();
+
+Array.Reverse(characterMessage);
+
+int letterCount = 0;
+
+foreach (char letter in characterMessage) 
+{ 
+    if (letter == 'o')
+    {
+        letterCount++; 
+    }
+};
+
+string new_message = new String(characterMessage);
+
+Console.WriteLine(new_message);
+Console.WriteLine($"'o' appears {letterCount} times");
+
+Console.WriteLine("=======================================================");
+Console.WriteLine("new code");
+Console.WriteLine("=======================================================");
+int examAssignments = 5;
+
+int[] sophiaScores = new int[] { 90, 86, 87, 98, 100, 94, 90 };
+int[] andrewScores = new int[] { 92, 89, 81, 96, 90, 89 };
+int[] emmaScores = new int[] { 90, 85, 87, 98, 68, 89, 89, 89 };
+int[] loganScores = new int[] { 90, 95, 87, 88, 96, 96 };
+int[] beckyScores = new int[] { 92, 91, 90, 91, 92, 92, 92 };
+int[] chrisScores = new int[] { 84, 86, 88, 90, 92, 94, 96, 98 };
+int[] ericScores = new int[] { 80, 90, 100, 80, 90, 100, 80, 90 };
+int[] gregorScores = new int[] { 91, 91, 91, 91, 91, 91, 91 };
+
+// Student names
+string[] studentNames = new string[] { "Sophia", "Andrew", "Emma", "Logan", "Becky", "Chris", "Eric", "Gregor" };
+int[] studentScore = new int[10];
+string currentStudentLetterGrade = "";
+
+
+Console.WriteLine("Student\t\tGrade");
+
+foreach(string name in studentNames)
+{
+    string currentStudent = name; ;
+    if (currentStudent == "Sophia")
+        studentScore = sophiaScores;
+    else if (currentStudent == "Andrew")
+        studentScore = andrewScores;
+    else if (currentStudent == "Emma")
+        studentScore = emmaScores;
+    else if (currentStudent == "Logan")
+        studentScore = loganScores;
+    else if (currentStudent == "Becky")
+        studentScore = beckyScores;
+    else if (currentStudent == "Chris")
+        studentScore = chrisScores;
+    else if (currentStudent == "Eric")
+        studentScore = ericScores;
+    else if (currentStudent == "Gregor")
+        studentScore = gregorScores;
+    else
+        continue;
+
+    int sumAssignmentScores = 0;
+        decimal currentStudentGrade = 0;
+
+    int gradeAssignments = 0;
+        foreach (int score in studentScore)
+        {
+        gradeAssignments += 1;
+        if (gradeAssignments <= examAssignments)
+            sumAssignmentScores += score;
+        else
+            sumAssignmentScores += score / 10;
+        }
+
+        currentStudentGrade = (decimal)sumAssignmentScores / examAssignments;
+
+
+    if (currentStudentGrade >= 97)
+        currentStudentLetterGrade = "A+";
+
+    else if (currentStudentGrade >= 93)
+        currentStudentLetterGrade = "A";
+
+    else if (currentStudentGrade >= 90)
+        currentStudentLetterGrade = "A-";
+
+    else if (currentStudentGrade >= 87)
+        currentStudentLetterGrade = "B+";
+
+    else if (currentStudentGrade >= 83)
+        currentStudentLetterGrade = "B";
+
+    else if (currentStudentGrade >= 80)
+        currentStudentLetterGrade = "B-";
+
+    else if (currentStudentGrade >= 77)
+        currentStudentLetterGrade = "C+";
+
+    else if (currentStudentGrade >= 73)
+        currentStudentLetterGrade = "C";
+
+    else if (currentStudentGrade >= 70)
+        currentStudentLetterGrade = "C-";
+
+    else if (currentStudentGrade >= 67)
+        currentStudentLetterGrade = "D+";
+
+    else if (currentStudentGrade >= 63)
+        currentStudentLetterGrade = "D";
+
+    else if (currentStudentGrade >= 60)
+        currentStudentLetterGrade = "D-";
+
+    else
+        currentStudentLetterGrade = "F";
+
+    Console.WriteLine($"{name}:\t\t{currentStudentGrade}\t{currentStudentLetterGrade}");
+    
+}
+
+Console.WriteLine("Press the enter key to continue");
+Console.ReadLine();
+
+
+
+
+
+
+
