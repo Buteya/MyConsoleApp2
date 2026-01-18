@@ -340,8 +340,39 @@ foreach(string name in studentNames)
 
 Console.WriteLine("Press the enter key to continue");
 Console.ReadLine();
-
-
+Console.WriteLine("========================================================");
+Console.WriteLine("new code");
+Console.WriteLine("========================================================");
+Console.WriteLine("a" == "a");
+Console.WriteLine("A" == "a");
+Console.WriteLine(1 == 2);
+string myName = "a";
+Console.WriteLine(myName == "a");
+string value1 = " a";
+string value2 = "A ";
+Console.WriteLine(value1.Trim().ToLower() == value2.Trim().ToLower());
+Console.WriteLine("a" != "a");
+Console.WriteLine("A" != "a");
+Console.WriteLine(1 != 2);
+string myValue = "a";
+Console.WriteLine(myValue != "a");
+Console.WriteLine(1 > 2);
+Console.WriteLine(1 < 2);
+Console.WriteLine(1 >= 1);
+Console.WriteLine(1 <= 1);
+string pangram = "The quick brown fox jumos over the lazy dog";
+Console.WriteLine(pangram.Contains("fox"));
+Console.WriteLine(pangram.Contains("cow"));
+Console.WriteLine(pangram.Contains("fox") == false);
+Console.WriteLine(!pangram.Contains("fox"));
+Console.WriteLine(!pangram.Contains("fox"));
+Console.WriteLine(!pangram.Contains("cow"));
+int a = 6;
+int b = 7;
+Console.WriteLine(a != b);
+string s1 = "Hello";
+string s2 = "Hello";
+Console.WriteLine(s1 != s2);
 
 
 
