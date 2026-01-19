@@ -373,7 +373,12 @@ Console.WriteLine(a != b);
 string s1 = "Hello";
 string s2 = "Hello";
 Console.WriteLine(s1 != s2);
-
+Console.WriteLine("=========================================================");
+Console.WriteLine("new code");
+Console.WriteLine("=========================================================");
+int saleAmount = 1001;
+int discount = saleAmount > 1000 ? 100 : 50;
+Console.WriteLine($"Discount: {discount}");
 
 
 
