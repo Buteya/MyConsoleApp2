@@ -379,7 +379,12 @@ Console.WriteLine("=========================================================");
 int saleAmount = 1001;
 int discount = saleAmount > 1000 ? 100 : 50;
 Console.WriteLine($"Discount: {discount}");
-
+Console.WriteLine("=========================================================");
+Console.WriteLine("new code");
+Console.WriteLine("=========================================================");
+Random chance = new Random();
+int nextChance = chance.Next(1, 3);
+Console.WriteLine(nextChance == 1 ? "heads":"tails");
 
 
 
