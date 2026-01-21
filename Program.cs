@@ -385,6 +385,31 @@ Console.WriteLine("=========================================================");
 Random chance = new Random();
 int nextChance = chance.Next(1, 3);
 Console.WriteLine(nextChance == 1 ? "heads":"tails");
+Random coin = new Random();
+int flip = coin.Next(0, 2);
+Console.WriteLine((flip == 0) ? "heads" : "tails");
+Console.WriteLine("=========================================================");
+Console.WriteLine("new code");
+Console.WriteLine("=========================================================");
+String permissions = "Admin|Manager";
+int level = 55;
+if(permissions.Contains("Admin") && level > 55)
+{
+    Console.WriteLine("Welcome, Auper Admin user");
+} else if(permissions.Contains("Admin") && level <= 55)
+{
+    Console.WriteLine("Welcome, Admin user");
+} else if(permissions.Contains("Manager") && level >= 20)
+{
+    Console.WriteLine("Contact admin for help");
+} else if(permissions.Contains("Manager") && level < 20)
+{
+    Console.WriteLine("You don't have sufficient privilages");
+}
+else
+{
+    Console.WriteLine("You don't have sufficient privilages");
+}
 
 
 
