@@ -410,6 +410,16 @@ else
 {
     Console.WriteLine("You don't have sufficient privilages");
 }
+Console.WriteLine("==========================================================");
+Console.WriteLine("new code");
+Console.WriteLine("==========================================================");
+bool flag = true;
+int value = 6;
+if (flag)
+{
+    Console.WriteLine($"Inside the code block: {value}");
+}
+Console.WriteLine($"Outside the code block: {value}");
 
 
 
