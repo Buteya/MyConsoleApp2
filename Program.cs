@@ -420,6 +420,31 @@ if (flag)
     Console.WriteLine($"Inside the code block: {value}");
 }
 Console.WriteLine($"Outside the code block: {value}");
+Console.WriteLine("===========================================================");
+Console.WriteLine("new code");
+Console.WriteLine("===========================================================");
+int employeeLevel = 100;
+string employeeName = "John Smith";
+string title = "";
+
+switch (employeeLevel) {
+    // for case 100 and 200 both to represent senior associate
+    case 100:
+    case 200:
+        title = "Senior Associate";
+        break;
+    case 300:
+        title = "Manager";
+        break;
+    case 400:
+        title = "Senior Manager";
+        break;
+    default:
+        title = "Associate";
+        break;
+}
+Console.WriteLine($"{employeeName} {title}");
+
 
 
 
