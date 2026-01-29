@@ -497,6 +497,21 @@ switch (product[2]) {
         break;
 }
 Console.WriteLine($"product: {size} {color} {type}");
+Console.WriteLine("==================================================");
+Console.WriteLine("new code");
+Console.WriteLine("==================================================");
+Console.Write("{i e R: 0 <= i >= 10} ");
+for(int i = 0; i <= 10; i++)
+{
+   
+    Console.Write(i);
+}
+Console.WriteLine();
+string[] firstnames = { "michael", "David", "Cain", "Joshua" };
+for(int i = 0;i < firstnames.Length; i++)
+{
+    Console.WriteLine(firstnames[i]);
+}
 
 
 
