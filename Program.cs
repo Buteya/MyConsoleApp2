@@ -512,6 +512,40 @@ for(int i = 0;i < firstnames.Length; i++)
 {
     Console.WriteLine(firstnames[i]);
 }
+Console.WriteLine("===================================================");
+Console.WriteLine("new code");
+Console.WriteLine("===================================================");
+for(int i = 1; i <= 100; i++)
+{        
+    if(i % 3 == 0)
+        {
+        if (i % 5 == 0)
+        {
+            Console.WriteLine($"{i} - FizzBuzz");
+            continue;
+        }
+        Console.WriteLine($"{i} - Fizz");
+        }
+        else if(i % 5 == 0)
+        {
+            Console.WriteLine($"{i} - Buzz");
+        }
+    else
+    {
+        Console.WriteLine(i);
+    }    
+}
+
+Console.WriteLine("========================================================");
+Console.WriteLine("new code");
+Console.WriteLine("========================================================");
+Random numberRandom = new Random();
+int currentNumber = 0;
+do {
+    currentNumber = numberRandom.Next(1, 11);
+    Console.WriteLine(currentNumber);
+} while (currentNumber != 7);
+
 
 
 
