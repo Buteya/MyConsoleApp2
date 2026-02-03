@@ -541,12 +541,49 @@ Console.WriteLine("new code");
 Console.WriteLine("========================================================");
 Random numberRandom = new Random();
 int currentNumber = 0;
-do {
+/*do {
     currentNumber = numberRandom.Next(1, 11);
+     if(currentNumber >= 8)
+        continue;
     Console.WriteLine(currentNumber);
 } while (currentNumber != 7);
 
+*/
+while(currentNumber >= 3)
+{
+    Console.WriteLine(currentNumber);
+    currentNumber = numberRandom.Next(1, 11);
+}
+Console.WriteLine($"Last number: {currentNumber}");
+Console.WriteLine("=========================================================");
+Console.WriteLine("new code");
+Console.WriteLine("=========================================================");
+int heroHealth = 10;
+int monsterHealth = 10;
+Random randomAttack = new Random();
 
-
+do
+{
+    int attack = randomAttack.Next(1, 11);  
+    if (monsterHealth <= 0 || heroHealth <= 0) break;  
+    monsterHealth -= attack;
+    Console.WriteLine($"Monster was damaged and lost {attack} health and now has {monsterHealth} health.");
+    if (monsterHealth > 0)
+    {
+        attack = randomAttack.Next(1, 11);
+        heroHealth -= attack;
+        Console.WriteLine($"Hero was damaged and lost {attack} health and now has {heroHealth} health.");
+    }
+ 
+    
+} while (monsterHealth >= 0 || heroHealth >= 0);
+if(monsterHealth <= 0)
+{
+    Console.WriteLine("Hero wins!");
+}
+else
+{
+    Console.WriteLine("Monster wins!");
+}
 
 
