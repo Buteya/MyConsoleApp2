@@ -585,5 +585,49 @@ else
 {
     Console.WriteLine("Monster wins!");
 }
+Console.WriteLine("=========================================================");
+Console.WriteLine("new code");
+Console.WriteLine("=========================================================");
+Console.WriteLine("Enter a value between 5 and 10");
+int valueInput;
+do
+{
+    bool isValid;
+    isValid = int.TryParse(Console.ReadLine(), out valueInput);
+    if (isValid && !(valueInput >= 5 && valueInput <= 10))
+        Console.WriteLine($"You entered {valueInput}, please enter a number between 5 and 10.");
+    else if (!isValid)
+        Console.WriteLine("Sorry you entered an invalid number, please try again.");
+} while (!(valueInput>5 && valueInput<10));
+if(valueInput>5 && valueInput < 10)
+{
+    Console.WriteLine($"Your input value ({valueInput}) has been accepted");
+}
 
 
+Console.WriteLine("Enter your role name (administrator, manager or user)");
+String? inputToCheck; 
+while(true)
+{
+    inputToCheck = Console.ReadLine()!.Trim();
+    String checkInput = inputToCheck!.ToLower().Trim();
+    if (checkInput == "administrator" || checkInput == "manager" || checkInput == "user")
+    {
+        Console.WriteLine($"Your input value ({inputToCheck}) has been accepted.");
+        break;
+    }
+    else
+    {
+        Console.WriteLine($"The role name that you entered, \"{inputToCheck}\" is not valid. Enter your role name (administrator, manager, user)");
+    }
+}
+String[] myString = new String[2] { "I like pizza. I like roast chicken. I like salad", "I like all three of the menu choices" };
+int[] periodLocation = new int[] { };
+
+for(int i = 0; i < myString.Length; i++)
+{
+    for(int j = 0;j < myString[i].Length; j++)
+    {
+        Console.WriteLine(myString[i]);
+    }
+}
