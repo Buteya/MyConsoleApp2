@@ -1,7 +1,4 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using Microsoft.VisualBasic;
-using System;
-
 Console.WriteLine("Hello, World!");
 Console.WriteLine("The current date and time is " + DateTime.Now);
 Console.WriteLine("Hello, World! I'm Steve Masira. Nice to meet you here.");
@@ -971,3 +968,21 @@ if (readResult != null)
     }
    
 } while (menuSelection != "exit");
+
+Console.WriteLine("====================================");
+Console.WriteLine("New Code");
+Console.WriteLine("====================================");
+
+Console.WriteLine("Signed integral types: ");
+Console.WriteLine($"sbyte   : {sbyte.MinValue} to {sbyte.MaxValue}");
+Console.WriteLine($"short   : {short.MinValue} to {short.MaxValue}");
+Console.WriteLine($"int : {int.MinValue} to {int.MaxValue}");
+Console.WriteLine($"long    : {long.MinValue} to {long.MaxValue}");
+
+Console.WriteLine("");
+Console.WriteLine("Unsigned integral types:");
+
+Console.WriteLine($"byte   : {byte.MinValue} to {byte.MaxValue}");
+Console.WriteLine($"ushort : {ushort.MinValue} to {ushort.MaxValue}");
+Console.WriteLine($"uint   : {uint.MinValue} to {uint.MaxValue}");
+Console.WriteLine($"ulong  : {ulong.MinValue} to {ulong.MaxValue}");
