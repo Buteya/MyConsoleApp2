@@ -1010,6 +1010,40 @@ Console.WriteLine("--Refrence Types--");
 Console.WriteLine($"ref_A: {ref_A[0]}");
 Console.WriteLine($"ref_B: {ref_B[0]}");
 
+Console.WriteLine("=============================================");
+Console.WriteLine("new code");
+Console.WriteLine("=============================================");
 
+int first = 2;
+string second = "4";
+string result = first + second;
+Console.WriteLine(result);
+
+int myInt = 3;
+Console.WriteLine($"int: {myInt}");
+decimal myDecimal = myInt;
+Console.WriteLine($"decimal: {myDecimal}.");
+decimal convertToInt = 3.14m;
+Console.WriteLine($"decimal: {convertToInt}");
+int convertedFromDecimal = (int)convertToInt;
+Console.WriteLine($"int: {convertedFromDecimal}");
+
+decimal convertToFloat = 1.23456789m;
+float convertedDecimalToFloat = (float)convertToFloat;
+
+Console.WriteLine($"decimal: {convertToFloat}");
+Console.WriteLine($"float: {convertedDecimalToFloat}");
+
+string valueString = "102";
+int newResult = 0;
+if(int.TryParse(valueString,out newResult))
+{
+    Console.WriteLine($"mesaurement: {newResult}");
+}
+else
+{
+    Console.WriteLine("unable to report the measurement.");
+}
+Console.WriteLine($"measurement (w/offset): {50 + newResult}");
 
 
