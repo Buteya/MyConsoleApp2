@@ -1046,4 +1046,25 @@ else
 }
 Console.WriteLine($"measurement (w/offset): {50 + newResult}");
 
+decimal totalForValue = 0;
+string messagesToAdd = "";
+string[] valuesToChange = { "12.3","45","ABC","11","DEF" };
+decimal parsvalue = 0;
+    for (int i = 0; i < valuesToChange.Length; i++)
+    {
+        if (decimal.TryParse(valuesToChange[i], out parsvalue))
+        {
+        totalForValue += parsvalue;
+        }
+        else
+        {
+        messagesToAdd += valuesToChange[i];      
+        }
+    }
+
+Console.WriteLine($"message: {messagesToAdd}");
+Console.WriteLine($"total: {totalForValue}");
+
+
+
 
