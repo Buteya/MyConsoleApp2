@@ -1065,6 +1065,23 @@ decimal parsvalue = 0;
 Console.WriteLine($"message: {messagesToAdd}");
 Console.WriteLine($"total: {totalForValue}");
 
+Console.WriteLine("================================================");
+Console.WriteLine("new code");
+Console.WriteLine("================================================");
 
+string[] pallets = { "B14","A11","B12","A13"};
+Console.WriteLine("sorted...");
 
+Array.Sort(pallets);
+foreach(var pallet in pallets)
+{
+    Console.WriteLine($"-- {pallet}");
+}
 
+Console.WriteLine("");
+Console.WriteLine("reversed...");
+Array.Reverse(pallets);
+foreach(var pallet in pallets)
+{
+    Console.WriteLine($"-- {pallet}");
+}
