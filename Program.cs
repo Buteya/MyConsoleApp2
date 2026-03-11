@@ -1109,4 +1109,35 @@ foreach(var pallet in pallets)
     Console.WriteLine($"-- {pallet}");
 }
 
+string myStringValue = "abc123";
+char[] myCharArray = myStringValue.ToCharArray();
+Array.Reverse(myCharArray);
+string delimitedString = string.Join(",", myCharArray);
+Console.WriteLine(delimitedString);
+string[] itemChar = delimitedString.Split(',');
+foreach(var item in itemChar)
+{
+    Console.WriteLine(item);
+}
+string resultString = new string(myCharArray);
+Console.WriteLine(resultString);
 
+string pangramArray = "The quick brown fox jumps over the lazy dog";
+
+// Step 1
+string[] splitPangramArray = pangram.Split(' ');
+
+//Step 2
+string[] newStringArray = new string[splitPangramArray.Length];
+
+// Step 3
+for (int i = 0; i < splitPangramArray.Length; i++)
+{
+    char[] letters = splitPangramArray[i].ToCharArray();
+    Array.Reverse(letters);
+    newStringArray[i] = new string(letters);
+}
+
+//Step 4
+string reversedString = String.Join(" ", newStringArray);
+Console.WriteLine(reversedString);
