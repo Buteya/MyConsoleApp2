@@ -1147,7 +1147,7 @@ string[] ordersArray = orderStream.Split(',');
 ordersArray.Sort();
 foreach(var order in ordersArray)
 {
-    if(order == "C15" || order == "G3003") {
+    if(order.Length != 4) {
         Console.WriteLine($"{order}\t - Error");
     }
     else
