@@ -1122,10 +1122,10 @@ foreach(var item in itemChar)
 string resultString = new string(myCharArray);
 Console.WriteLine(resultString);
 
-string pangramArray = "The quick brown fox jumps over the lazy dog";
+string pangramArrays = "The quick brown fox jumps over the lazy dog";
 
 // Step 1
-string[] splitPangramArray = pangram.Split(' ');
+string[] splitPangramArray = pangramArrays.Split(' ');
 
 //Step 2
 string[] newStringArray = new string[splitPangramArray.Length];
@@ -1141,3 +1141,18 @@ for (int i = 0; i < splitPangramArray.Length; i++)
 //Step 4
 string reversedString = String.Join(" ", newStringArray);
 Console.WriteLine(reversedString);
+
+string orderStream = "B123,C234,A345,C15,B177,G3003,C235,B179";
+string[] ordersArray = orderStream.Split(',');
+ordersArray.Sort();
+foreach(var order in ordersArray)
+{
+    if(order == "C15" || order == "G3003") {
+        Console.WriteLine($"{order}\t - Error");
+    }
+    else
+    {
+        Console.WriteLine(order);
+    }
+   
+}
