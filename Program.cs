@@ -1147,12 +1147,39 @@ string[] ordersArray = orderStream.Split(',');
 ordersArray.Sort();
 foreach(var order in ordersArray)
 {
-    if(order.Length != 4) {
+    if (order.Length != 4)
+    {
         Console.WriteLine($"{order}\t - Error");
     }
     else
     {
         Console.WriteLine(order);
     }
-   
 }
+
+Console.WriteLine("=========================================");
+Console.WriteLine("new code");
+Console.WriteLine("=========================================");
+
+string firstString = "Hello";
+string secondString = "World!";
+string resultStringFormatted = string.Format("{0},{1}",firstString,secondString);
+Console.WriteLine(resultStringFormatted);
+
+decimal price = 67.55m;
+decimal salePrice = 59.99m;
+
+string yourDiscount = String.Format("You saved {0:C2} off the regular {1:C2} price. ", (price - salePrice), price);
+
+yourDiscount += $"A discount of {((price - salePrice) / price):P2}!"; 
+Console.WriteLine(yourDiscount);
+
+decimal priceDecimal = 67.55m;
+decimal salePriceDecimal = 59.99m;
+
+string yourDiscountString = String.Format("You saved {0:C2} off the regular {1:C2} price. ", (price - salePrice), price);
+
+Console.WriteLine(yourDiscountString);
+
+decimal measurement = 123456.78912m;
+Console.WriteLine($"Measurement: {measurement:N} units");
