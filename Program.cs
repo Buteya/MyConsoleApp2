@@ -1183,3 +1183,16 @@ Console.WriteLine(yourDiscountString);
 
 decimal measurement = 123456.78912m;
 Console.WriteLine($"Measurement: {measurement:N} units");
+
+int invoiceNumber = 1201;
+decimal productShares = 25.4568m;
+decimal subTotal = 2750.0000m;
+decimal taxPercentage = .15825m;
+decimal totalBilled = 3581.19m;
+
+
+Console.WriteLine($"Invoice number: {invoiceNumber}");
+Console.WriteLine($"    Shares: {productShares:N3}");
+Console.WriteLine($"        Subtotal: {subTotal:C}");
+Console.WriteLine($"             Tax: {taxPercentage:P2}");
+Console.WriteLine($"                TotalBilled: {totalBilled:C}");
