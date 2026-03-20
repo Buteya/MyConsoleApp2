@@ -1243,3 +1243,16 @@ comparisonMessage += String.Format("{0:P}", newReturn).PadRight(10);
 comparisonMessage += String.Format("{0:C}", newProfit).PadRight(20);
 
 Console.WriteLine(comparisonMessage);
+
+
+Console.WriteLine("====================================================");
+Console.WriteLine("new code");
+Console.WriteLine("====================================================");
+
+string findParentheses = "Find what is (inside the parentheses)";
+
+int openParentheses = findParentheses.IndexOf('(') + 1;
+int closeParentheses = findParentheses.IndexOf(')');
+int substringLength = closeParentheses - openParentheses;
+string insideParentheses = findParentheses.Substring(openParentheses, substringLength);
+Console.WriteLine(insideParentheses);
