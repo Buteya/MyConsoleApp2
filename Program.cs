@@ -1307,3 +1307,12 @@ while (true)
     int length = closingPosition - openingPosition;
     Console.WriteLine(messageIndexOf.Substring(openingPosition, length));
 }
+
+string dataRemove = "12345John Smith          5000  3  ";
+string updatedData = dataRemove.Remove(5, 20);
+Console.WriteLine(updatedData);
+
+string messageReplace = "This--is--ex-amp-le--da-ta";
+message = messageReplace.Replace("--", " ");
+message = messageReplace.Replace("-", "");
+Console.WriteLine(messageReplace);
