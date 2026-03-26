@@ -1316,3 +1316,26 @@ string messageReplace = "This--is--ex-amp-le--da-ta";
 message = messageReplace.Replace("--", " ");
 message = messageReplace.Replace("-", "");
 Console.WriteLine(messageReplace);
+
+const string inputMod = "<div><h2>Widgets &trade;</h2><span>5000</span></div>";
+
+string quantity = "";
+string output = "";
+string newOutput = "";
+string newQuantity = "";
+
+// Your work here
+int divOpening = inputMod.IndexOf("<div>");
+int spanClosing = inputMod.IndexOf("</span>");
+
+output = inputMod.Remove(0, divOpening + 5);
+newOutput = output.Remove(spanClosing+2, 6);
+output = newOutput;
+
+quantity = inputMod.Remove(0, spanClosing-4);
+newQuantity = quantity.Replace("</span>", "");
+quantity = newQuantity.Replace("</div>","");
+
+Console.WriteLine(quantity.TrimEnd());
+Console.WriteLine(output);
+
