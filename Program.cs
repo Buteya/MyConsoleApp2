@@ -1330,7 +1330,7 @@ int spanClosing = inputMod.IndexOf("</span>");
 
 output = inputMod.Remove(0, divOpening + 5);
 newOutput = output.Remove(spanClosing+2, 6);
-output = newOutput;
+output = newOutput.Replace("&trade", "&reg");
 
 quantity = inputMod.Remove(0, spanClosing-4);
 newQuantity = quantity.Replace("</span>", "");
